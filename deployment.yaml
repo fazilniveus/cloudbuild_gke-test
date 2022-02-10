@@ -16,4 +16,4 @@ spec:
       - name: cloudbuild-gke
         image: 'us-central1-docker.pkg.dev/$PROJECT_ID/helloworld-docker-repo/cloudbuild_gke:tag1'
         ports:
-        - containerPort: 80 
+        - containerPort: 80
