@@ -13,3 +13,9 @@ steps:
     - --filename=deployment.yaml
     - --location=us-central1
     - --cluster=autopilot-cluster 
+  - name: "gcr.io/cloud-builders/gke-deploy"
+    args:
+    - run
+    - --filename=service.yaml
+    - --location=us-central1
+    - --cluster=autopilot-cluster 
