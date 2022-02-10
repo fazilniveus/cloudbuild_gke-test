@@ -7,3 +7,9 @@ steps:
       - push
       - 'us-central1-docker.pkg.dev/$PROJECT_ID/helloworld-docker-repo/cloudrun_gke:tag1'
     id: Push
+  - name: "gcr.io/cloud-builders/gke-deploy"
+    args:
+    - run
+    - --filename=deployment.yaml
+    - --location=us-central1
+    - --cluster=autopilot-cluster
