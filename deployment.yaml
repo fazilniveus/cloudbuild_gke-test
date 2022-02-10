@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudrun-gke-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: cloudrun-gke
+    spec:
+      containers:
+      - name: cloudrun-gke
+        image: 'us-central1-docker.pkg.dev/$PROJECT_ID/helloworld-docker-repo/cloudrun_gke:tag1'
+        ports:
+        - containerPort: 80
