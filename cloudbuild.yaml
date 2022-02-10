@@ -12,4 +12,4 @@ steps:
     - run
     - --filename=deployment.yaml
     - --location=us-central1
-    - --cluster=autopilot-cluster
+    - --cluster=autopilot-cluster 
