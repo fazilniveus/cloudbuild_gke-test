@@ -13,9 +13,11 @@ steps:
     - --filename=deployment.yaml
     - --location=us-central1
     - --cluster=autopilot-cluster 
-  - name: "gcr.io/cloud-builders/gke-deploy"
+  - name: "gcr.io/cloud-builders/kubectl"
     args:
-    - run
-    - --filename=service.yaml
-    - --location=us-central1
-    - --cluster=autopilot-cluster 
+    - 'apply'
+    - '-f'
+    - 'service.yaml'
+    env:
+    - 'CLOUDSDK_COMPUTE_REGION=us-central1'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=autopilot-cluster'
