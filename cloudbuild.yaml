@@ -19,5 +19,5 @@ steps:
     - '-f'
     - 'service.yaml'
     env:
-    - 'CLOUDSDK_COMPUTE_REGION=us-central1'
-    - 'CLOUDSDK_CONTAINER_CLUSTER=autopilot-cluster'
+    - 'CLOUDSDK_COMPUTE_REGION=asia-south1-a'
+    - 'CLOUDSDK_CONTAINER_CLUSTER= jenkins-jen-cluster'
